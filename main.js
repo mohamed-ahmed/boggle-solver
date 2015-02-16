@@ -70,7 +70,7 @@ function getWords(r, c, string){
 		var rIndex = r + offsetArray[rOffset];
 		for(var cOffset in offsetArray){
 			var cIndex = c + offsetArray[cOffset];
-			if( !(rIndex == 0 && cIndex == 0) && inBoundary(rIndex, cIndex)){
+			if( !(offsetArray[rOffset] == 0 && offsetArray[cOffset] == 0) && inBoundary(rIndex, cIndex)){
 				console.log("indexes: " + rIndex + "," + cIndex);
 				getWords(rIndex, cIndex, string + puzzle[rIndex][cIndex]);
 			}
